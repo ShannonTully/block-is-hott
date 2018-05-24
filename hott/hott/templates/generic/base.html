@@ -4,34 +4,34 @@
 {% load sass_tags %}
 
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="{% sass_src 'static_scss/_main.scss' %}" rel="stylesheet" type="text/css" />
-  <title>Block Is Hott HeatMap</title>
-</head>
-<body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="{% url "home" %}">Home</a></li>
-        {% if user.is_authenticated %}
-        <li><a href="{% url "profile" %}">{{ user.username }}</a></li>
-        <li><a href="">Maps</a></li>
-        {% if user.is_superuser %}
-        <li><a href="{% url "admin:index" %}">Admin</a></li>
-        {% endif %}
-        <li><a href="{% url "auth_logout" %}">Logout</a></li>
-        {% else %}
-        <li><a href="{% url "registration_register" %}">Signup</a></li>
-        <li><a href="{% url "auth_login" %}">Signin</a></li>
-        {% endif %}
-      </ul>
-    </nav>
-    <section class="sec1"></section>
-    <section class="sec2"></section>
-  </header>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="{% sass_src '_main.scss' %}" rel="stylesheet" type="text/css" />
+    <title>hotBlock</title>
+  </head>
+
+  <body>
+    <div id="header-bar">
+      <img src="{% static "hotblock_logo.jpg" %}" id= "hotblock_logo" alt= "The block is hott" />
+      <h1 id= "home">hotBlock</h1>
+        <ul id="nav-bar">
+          <li class="menu spacer"><a class="menu link"href="{% url "home" %}">Home</a></li>
+          {% if user.is_authenticated %}
+          <li class="menu spacer"><a class="menu link" href="{% url "profile" %}">{{ user.username }}</a></li>
+          <li class="menu spacer"><a class="menu link" href="">Maps</a></li>
+          {% if user.is_superuser %}
+          <li class="menu spacer"><a class="menu link" href="{% url "admin:index" %}">Admin</a></li>
+          {% endif %}
+          <li class="menu spacer"><a class="menu link" href="{% url "auth_logout" %}">Logout</a></li>
+          {% else %}
+          <li class="menu spacer"><a class="menu link" href="{% url "registration_register" %}">Signup</a></li>
+          <li class="menu spacer"><a class="menu link" href="{% url "auth_login" %}">Signin</a></li>
+          {% endif %}
+          <li class="menu spacer"><a class="menu link" href="www.yourmom.com">About Us</a></li>
+        </ul>
+    </div>
   <main>
     {% block content %}
     <h3>No Content</h3>

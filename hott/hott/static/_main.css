@@ -1,74 +1,11 @@
 @charset "UTF-8";
-body {
-  background: lightcyan; }
-
-header {
-  background: lightsalmon;
-  width: 100%; }
-
-main {
-  width: 1200px; }
-
-.sec1 {
-  width: 100%;
-  height: 10vh;
-  box-sizing: border-box; }
-
-nav {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 70px;
-  padding: 0 100px;
-  box-sizing: border-box; }
-
-nav ul {
-  float: right;
-  display: flex;
-  margin: 0;
-  padding: 0; }
-
-nav ul li {
-  list-style-type: none; }
-
-nav ul li a {
-  position: relative;
-  display: block;
-  height: 70px;
-  line-height: 70px;
-  padding: 0 20px;
-  box-sizing: border-box;
-  color: #fff;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition: .5s; }
-
-nav ul li a:hover {
-  color: #262626; }
-
-nav ul li a:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  transform-origin: right;
-  transform: scaleX(0);
-  transition: transform .5s; }
-
-nav ul li a:hover:before {
-  transform-origin: left;
-  transform: scaleX(1); }
-
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:700|Share+Tech+Mono" rel="stylesheet');
 html {
   font-family: sans-serif;
   /* 1 */
@@ -887,3 +824,122 @@ hr {
 /* Larger than tablet */
 /* Larger than desktop */
 /* Larger than Desktop HD */
+body {
+  background-color: #888888;
+  color: black;
+  padding: 20px;
+  font-family: Garamond, times, serif;
+  border: 0px; }
+
+section {
+  width: 100%; }
+
+#header-bar {
+  width: 95%;
+  margin: auto; }
+
+#header-bar img {
+  display: absolute;
+  width: 100%; }
+
+#header-bar h1 {
+  color: #ff9913;
+  font-size: 80px;
+  font-weight: bold;
+  font-family: 'Share Tech Mono', monospace;
+  padding: 0px;
+  margin: -95px 0 0 95px;
+  text-shadow: 2px 2px 5px #111111;
+  border: 0px; }
+
+ul {
+  width: 650px;
+  font: arial;
+  padding: 0px 15px;
+  margin: 0px 0px 0px 20px;
+  font-size: 20px;
+  border: 0px; }
+
+.menu {
+  display: inline;
+  padding: 0 30px;
+  margin: -20px, 0, 10px;
+  text-shadow: -1px -1px 0px #000000; }
+
+.link {
+  text-decoration: None;
+  color: white;
+  margin-bottom: 5px; }
+
+#nav-bar {
+  width: 90%;
+  padding: 0px 15px 10px;
+  margin: -40px 0px 0px 0px;
+  font-size: 20px;
+  border: 0px;
+  text-align: right; }
+
+#nav-channels {
+  text-decoration: none;
+  font-family: 'IBM Plex Mono', monospace;
+  color: white;
+  font-size: 18px; }
+
+#ballard {
+  width: 98%;
+  margin: 27px 0;
+  border-top: 5px solid #ac2f1e; }
+
+.sec1 {
+  width: 100%;
+  height: 7vh;
+  box-sizing: border-box; }
+
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  padding: 0 100px;
+  box-sizing: border-box; }
+
+nav ul {
+  float: right;
+  display: flex;
+  margin: 0;
+  padding: 0; }
+
+nav ul li {
+  list-style-type: none; }
+
+nav ul li a {
+  position: relative;
+  display: block;
+  height: 70px;
+  line-height: 70px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: .5s; }
+
+nav ul li a:hover {
+  color: #262626; }
+
+nav ul li a:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .5s; }
+
+nav ul li a:hover:before {
+  transform-origin: left;
+  transform: scaleX(1); }

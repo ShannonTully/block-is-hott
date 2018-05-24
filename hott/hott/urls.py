@@ -24,7 +24,8 @@ urlpatterns = [
     path('', HomeView.as_view(), name='home'),
     path('accounts/', include('registration.backends.hmac.urls')),
     path('profile/', include('hott_profile.urls')),
-    path('api/v1/', include('hott_api.urls'))
+    path('api/v1/', include('hott_api.urls')),
+    path('maps/', include('hott_overlays.urls')),
 ]
 
 if settings.DEBUG:
